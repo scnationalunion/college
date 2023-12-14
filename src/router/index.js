@@ -8,14 +8,18 @@ export default new Router({
     {
       path:'/',
       redirect:'/index',
+      // redirect:'/mindMap',
     },
-   
     // {
     //   path:'/',
     //   redirect:'/shopIndex'
     // },
+    // {
+    //   path:'/mindMap',
+    //   name:'mindMap',
+    //   component:()=>import('@/components/mind/Mindmap.vue')
+    // },
 
-  
     {
       path:'/toLogin',
       redirect:'/userLogin'
@@ -67,6 +71,12 @@ export default new Router({
         title:'hua后台管理'
       },
       children:[
+        //思维导图
+        {
+          path:'/mindMap',
+          name:'mindMap',
+          component:()=>import('@/components/mind/Mindmap.vue')
+        },
         //学生表的查询管理，
         {
           path:'/student',
